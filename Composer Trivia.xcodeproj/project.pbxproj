@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		6ACBFA642408270F008B248A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACBFA632408270F008B248A /* AppDelegate.swift */; };
 		6ACBFA662408270F008B248A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACBFA652408270F008B248A /* SceneDelegate.swift */; };
-		6ACBFA682408270F008B248A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACBFA672408270F008B248A /* ViewController.swift */; };
 		6ACBFA6B2408270F008B248A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACBFA692408270F008B248A /* Main.storyboard */; };
 		6ACBFA6D24082710008B248A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ACBFA6C24082710008B248A /* Assets.xcassets */; };
 		6ACBFA7024082710008B248A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACBFA6E24082710008B248A /* LaunchScreen.storyboard */; };
+		6ACBFA7924082850008B248A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACBFA7824082850008B248A /* HomeViewController.swift */; };
+		6ACBFA7B2408290D008B248A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACBFA7A2408290D008B248A /* QuestionViewController.swift */; };
+		6ACBFA7D2408292A008B248A /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACBFA7C2408292A008B248A /* HistoryTableViewController.swift */; };
+		6ACBFA7F24084EE7008B248A /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACBFA7E24084EE7008B248A /* PreferencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6ACBFA602408270F008B248A /* Composer Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Composer Trivia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACBFA632408270F008B248A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ACBFA652408270F008B248A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6ACBFA672408270F008B248A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6ACBFA6A2408270F008B248A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6ACBFA6C24082710008B248A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ACBFA6F24082710008B248A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ACBFA7124082710008B248A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ACBFA7724082714008B248A /* Composer Trivia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Composer Trivia.entitlements"; sourceTree = "<group>"; };
+		6ACBFA7824082850008B248A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6ACBFA7A2408290D008B248A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		6ACBFA7C2408292A008B248A /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		6ACBFA7E24084EE7008B248A /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +63,13 @@
 		6ACBFA622408270F008B248A /* Composer Trivia */ = {
 			isa = PBXGroup;
 			children = (
+				6ACBFA7724082714008B248A /* Composer Trivia.entitlements */,
 				6ACBFA632408270F008B248A /* AppDelegate.swift */,
 				6ACBFA652408270F008B248A /* SceneDelegate.swift */,
-				6ACBFA672408270F008B248A /* ViewController.swift */,
+				6ACBFA7824082850008B248A /* HomeViewController.swift */,
+				6ACBFA7A2408290D008B248A /* QuestionViewController.swift */,
+				6ACBFA7C2408292A008B248A /* HistoryTableViewController.swift */,
+				6ACBFA7E24084EE7008B248A /* PreferencesViewController.swift */,
 				6ACBFA692408270F008B248A /* Main.storyboard */,
 				6ACBFA6C24082710008B248A /* Assets.xcassets */,
 				6ACBFA6E24082710008B248A /* LaunchScreen.storyboard */,
@@ -138,9 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ACBFA682408270F008B248A /* ViewController.swift in Sources */,
 				6ACBFA642408270F008B248A /* AppDelegate.swift in Sources */,
 				6ACBFA662408270F008B248A /* SceneDelegate.swift in Sources */,
+				6ACBFA7B2408290D008B248A /* QuestionViewController.swift in Sources */,
+				6ACBFA7924082850008B248A /* HomeViewController.swift in Sources */,
+				6ACBFA7D2408292A008B248A /* HistoryTableViewController.swift in Sources */,
+				6ACBFA7F24084EE7008B248A /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +298,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Composer Trivia/Composer Trivia.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = Q6X243V23V;
 				INFOPLIST_FILE = "Composer Trivia/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,6 +309,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "sekhah.lane.Composer-Trivia";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,7 +319,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Composer Trivia/Composer Trivia.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = Q6X243V23V;
 				INFOPLIST_FILE = "Composer Trivia/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +330,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "sekhah.lane.Composer-Trivia";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
