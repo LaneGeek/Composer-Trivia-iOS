@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var a = Question.getQuestion()
+        
         // Set prefernces if first time
         if !UserDefaults.standard.bool(forKey: "defaultsAreStored") {
             // Set prefernces if first time

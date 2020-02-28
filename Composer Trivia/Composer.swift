@@ -16,7 +16,7 @@ class Composer {
     // Static method that returns a composer chosen at random
     static func getRandomComposer() -> Composer {
         
-        // This data has been copied from my Android version
+        // This data has been copied from the Android version
         var composersNames = ["Beethoven", "Mozart", "Tchaikovsky", "Mahler", "Bach", "Vivaldi",
                               "Handel", "Haydn", "Rossini", "Schubert", "Berlioz", "Liszt", "Wagner", "Verdi",
                               "Bruckner", "Brahms", "Dvorak", "Puccini", "Debussy", "Ravel", "Sibelius",
