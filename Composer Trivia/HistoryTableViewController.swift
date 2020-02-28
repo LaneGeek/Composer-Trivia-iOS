@@ -15,10 +15,10 @@ class HistoryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
         
         // Fill each cell with a reading from history
-        cell.textLabel?.text = history[indexPath.row]
+        cell.historyCellLabel.text = history[indexPath.row]
         return cell
     }
 }

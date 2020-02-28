@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6AAEA7632408AADE00EC37DA /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAEA7622408AADE00EC37DA /* Composer.swift */; };
 		6AAEA7652408BE3200EC37DA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAEA7642408BE3200EC37DA /* Question.swift */; };
+		6AAEA7672409D55C00EC37DA /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAEA7662409D55C00EC37DA /* HistoryTableViewCell.swift */; };
 		6ACBFA642408270F008B248A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACBFA632408270F008B248A /* AppDelegate.swift */; };
 		6ACBFA662408270F008B248A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACBFA652408270F008B248A /* SceneDelegate.swift */; };
 		6ACBFA6B2408270F008B248A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACBFA692408270F008B248A /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		6AAEA7622408AADE00EC37DA /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
 		6AAEA7642408BE3200EC37DA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6AAEA7662409D55C00EC37DA /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		6ACBFA602408270F008B248A /* Composer Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Composer Trivia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACBFA632408270F008B248A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ACBFA652408270F008B248A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				6ACBFA7A2408290D008B248A /* QuestionViewController.swift */,
 				6ACBFA7C2408292A008B248A /* HistoryTableViewController.swift */,
 				6ACBFA7E24084EE7008B248A /* PreferencesViewController.swift */,
+				6AAEA7662409D55C00EC37DA /* HistoryTableViewCell.swift */,
 				6AAEA7622408AADE00EC37DA /* Composer.swift */,
 				6AAEA7642408BE3200EC37DA /* Question.swift */,
 				6ACBFA692408270F008B248A /* Main.storyboard */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AAEA7672409D55C00EC37DA /* HistoryTableViewCell.swift in Sources */,
 				6ACBFA642408270F008B248A /* AppDelegate.swift in Sources */,
 				6AAEA7652408BE3200EC37DA /* Question.swift in Sources */,
 				6ACBFA662408270F008B248A /* SceneDelegate.swift in Sources */,
