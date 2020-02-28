@@ -109,7 +109,7 @@
                                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="84" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yun-tM-AXL">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yun-tM-AXL">
                                                 <rect key="frame" x="254" y="0.0" width="100" height="30.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="HqW-v1-KUb"/>
@@ -205,10 +205,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD0-ej-Bsm">
-                                <rect key="frame" x="40" y="772" width="127" height="50"/>
+                                <rect key="frame" x="40" y="772" width="334" height="50"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="PZV-WP-6k7"/>
                                     <constraint firstAttribute="height" constant="50" id="xpS-Lm-BeH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
@@ -246,7 +245,7 @@
                                         <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In what year was Mahler born?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-jr-6gb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-jr-6gb">
                                         <rect key="frame" x="0.0" y="42.333333333333343" width="354" height="24.666666666666671"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -265,7 +264,7 @@
                                             <constraint firstAttribute="height" constant="50" id="3Y5-yH-phc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="1677"/>
+                                        <state key="normal" title="0"/>
                                         <connections>
                                             <action selector="answerButtonClicked:" destination="eGh-TG-Rdx" eventType="touchUpInside" id="gJ5-4U-GAz"/>
                                         </connections>
@@ -278,7 +277,7 @@
                                             <constraint firstAttribute="height" constant="50" id="zFV-lH-KyZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="1738"/>
+                                        <state key="normal" title="0"/>
                                         <connections>
                                             <action selector="answerButtonClicked:" destination="eGh-TG-Rdx" eventType="touchUpInside" id="7G9-a7-HZz"/>
                                         </connections>
@@ -291,7 +290,7 @@
                                             <constraint firstAttribute="height" constant="50" id="xJR-a2-Pjr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="1844"/>
+                                        <state key="normal" title="0"/>
                                         <connections>
                                             <action selector="answerButtonClicked:" destination="eGh-TG-Rdx" eventType="touchUpInside" id="p1q-by-euV"/>
                                         </connections>
@@ -304,7 +303,7 @@
                                             <constraint firstAttribute="width" constant="130" id="hpq-8W-dKX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="1976"/>
+                                        <state key="normal" title="0"/>
                                         <connections>
                                             <action selector="answerButtonClicked:" destination="eGh-TG-Rdx" eventType="touchUpInside" id="upj-JK-XVK"/>
                                         </connections>
@@ -350,10 +349,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Question" id="Zso-5b-rpG"/>
                     <connections>
+                        <outlet property="button1" destination="dLG-ZZ-Hg2" id="FzI-Sh-zLg"/>
                         <outlet property="button2" destination="dr8-ep-lU5" id="gEJ-lP-mq1"/>
                         <outlet property="button3" destination="AoN-IV-doU" id="JqA-xs-tK8"/>
                         <outlet property="button4" destination="cmL-9v-Di3" id="Xgx-al-i0I"/>
-                        <outlet property="buuton1" destination="dLG-ZZ-Hg2" id="FzI-Sh-zLg"/>
+                        <outlet property="questionLabel" destination="Jjb-jr-6gb" id="oJs-vj-rUd"/>
+                        <outlet property="summaryLabel" destination="6zY-TR-H7F" id="gz0-vG-QQJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfk-nh-KdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -1,6 +1,7 @@
 import Foundation
 
 class Composer {
+    
     // Properties
     var name = ""
     var birthYear = 0

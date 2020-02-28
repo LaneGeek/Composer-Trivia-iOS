@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var a = Question.getQuestion()
+        var a = Question.getRandomQuestion()
         
         // Set prefernces if first time
         if !UserDefaults.standard.bool(forKey: "defaultsAreStored") {
@@ -46,9 +46,14 @@ class HomeViewController: UIViewController {
     }
     
     func updateDisplay() {
-        totalQuestionsLabel.text = String(correctTotal + incorrectTotal)
+        let totalQuestions = correctTotal + incorrectTotal
+        totalQuestionsLabel.text = String(totalQuestions)
         correctQuestionsLabel.text = String(correctTotal)
         incorrectQuestionsLabel.text = String(incorrectTotal)
-        percentageLabel.text = String(correctTotal * 100 / (correctTotal + incorrectTotal))
+        
+        // Avoid division by zero
+        if totalQuestions != 0 {
+            percentageLabel.text = String(correctTotal * 100 / (correctTotal + incorrectTotal))
+        }
     }
 }

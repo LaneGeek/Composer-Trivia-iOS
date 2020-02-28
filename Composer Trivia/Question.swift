@@ -1,40 +1,56 @@
 import Foundation
 
 class Question {
-    // Properties
-    var question = ""
-    var correctAnswer = 0
-    var answers: [Int] = []
     
-    static func getQuestion() -> Question {
+    // Properties
+    var text = ""
+    var correctAnswer = ""
+    var answers: [String] = []
+    var chosenAnswer = ""
+    
+    func isAnswerCorrect() -> Bool {chosenAnswer == correctAnswer}
+    
+    func summary() -> String {
+        if isAnswerCorrect() {
+            return "Well done! Your answer of \(chosenAnswer) is correct!"
+        } else {
+            return "Wrong! The actual year was \(correctAnswer)."
+        }
+    }
+    
+    // Return a random question
+    static func getRandomQuestion() -> Question {
+        
         // Get a random composer
         let composer = Composer.getRandomComposer()
         
-        // Choose at random if birth or death question
-        let isBirthQuestion = Int.random(in: 0 ... 1) == 0
+        // Choose at random if the question is about birth or death
+        let isQuestionAboutBirth = Int.random(in: 0 ... 1) == 0
         
         // Generate text for the question
         var question = "In what year "
-        question += isBirthQuestion ? "was" : "did"
+        question += isQuestionAboutBirth ? "was" : "did"
         question += " \(composer.name) "
-        question += isBirthQuestion ? "born?" : "die?"
+        question += isQuestionAboutBirth ? "born?" : "die?"
         
         // Correct answer is easy to determine
-        let correctAnswer = isBirthQuestion ? composer.birthYear : composer.deathYear
+        let correctAnswer = String(isQuestionAboutBirth ? composer.birthYear : composer.deathYear)
         
-        // Generate three random years which cannot be the same as the answer!
-        var answers = Set<Int>()
+        // EXPLAIN BETTER
+        var answers = Set<String>()
         answers.insert(correctAnswer)
         while answers.count < 4 {
-            answers.insert(Int.random(in: 1600 ... 1999))
+            answers.insert(String(Int.random(in: 1600 ... 1999)))
         }
         
+        // Generate the output
         let output = Question()
-        output.question = question
+        output.text = question
         output.correctAnswer = correctAnswer
         // Sort the set and convert to array
         output.answers = answers.sorted()
         
+        // Return the output
         return output
     }
 }
