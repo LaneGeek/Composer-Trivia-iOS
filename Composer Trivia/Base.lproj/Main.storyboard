@@ -185,6 +185,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="correctQuestionsLabel" destination="8Cm-Y8-DMJ" id="IPR-DM-rdI"/>
+                        <outlet property="incorrectQuestionsLabel" destination="73b-bw-5ct" id="PFw-Wc-4SM"/>
+                        <outlet property="percentageLabel" destination="yun-tM-AXL" id="xJL-eL-Yz9"/>
+                        <outlet property="totalQuestionsLabel" destination="B08-ds-QbI" id="7n1-7A-gs3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZu-TU-Znz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,8 +204,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD0-ej-Bsm">
-                                <rect key="frame" x="102" y="672" width="210" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD0-ej-Bsm">
+                                <rect key="frame" x="40" y="772" width="127" height="50"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="PZV-WP-6k7"/>
@@ -210,6 +216,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pD0-ej-Bsm" firstAttribute="leading" secondItem="zTt-4e-eP4" secondAttribute="leading" constant="40" id="7PF-lo-f2J"/>
+                            <constraint firstItem="zTt-4e-eP4" firstAttribute="bottom" secondItem="pD0-ej-Bsm" secondAttribute="bottom" constant="40" id="Qpt-Lk-EGB"/>
+                            <constraint firstItem="zTt-4e-eP4" firstAttribute="trailing" secondItem="pD0-ej-Bsm" secondAttribute="trailing" constant="40" id="z5S-Sd-l2T"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zTt-4e-eP4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Preferences" id="ELs-FD-RsZ"/>
@@ -255,6 +266,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="1677"/>
+                                        <connections>
+                                            <action selector="answerButtonClicked:" destination="eGh-TG-Rdx" eventType="touchUpInside" id="gJ5-4U-GAz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr8-ep-lU5">
                                         <rect key="frame" x="0.0" y="76" width="130" height="50"/>
@@ -265,6 +279,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="1738"/>
+                                        <connections>
+                                            <action selector="answerButtonClicked:" destination="eGh-TG-Rdx" eventType="touchUpInside" id="7G9-a7-HZz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoN-IV-doU">
                                         <rect key="frame" x="0.0" y="152" width="130" height="50"/>
@@ -275,6 +292,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="1844"/>
+                                        <connections>
+                                            <action selector="answerButtonClicked:" destination="eGh-TG-Rdx" eventType="touchUpInside" id="p1q-by-euV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmL-9v-Di3">
                                         <rect key="frame" x="0.0" y="228" width="130" height="50"/>
@@ -285,6 +305,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="1976"/>
+                                        <connections>
+                                            <action selector="answerButtonClicked:" destination="eGh-TG-Rdx" eventType="touchUpInside" id="upj-JK-XVK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -305,6 +328,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="Return To Scorecard"/>
+                                        <connections>
+                                            <action selector="returnToScoreboardClicked:" destination="eGh-TG-Rdx" eventType="touchUpInside" id="nua-CF-4BK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -323,6 +349,12 @@
                         <viewLayoutGuide key="safeArea" id="Svr-WA-av4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Question" id="Zso-5b-rpG"/>
+                    <connections>
+                        <outlet property="button2" destination="dr8-ep-lU5" id="gEJ-lP-mq1"/>
+                        <outlet property="button3" destination="AoN-IV-doU" id="JqA-xs-tK8"/>
+                        <outlet property="button4" destination="cmL-9v-Di3" id="Xgx-al-i0I"/>
+                        <outlet property="buuton1" destination="dLG-ZZ-Hg2" id="FzI-Sh-zLg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfk-nh-KdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -353,7 +385,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vnw-DI-6gC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" id="vnw-DI-6gC">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vnw-DI-6gC" id="lbZ-WA-Gmt">
