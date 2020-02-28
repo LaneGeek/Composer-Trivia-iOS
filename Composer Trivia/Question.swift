@@ -8,14 +8,23 @@ class Question {
     var answers: [String] = []
     var chosenAnswer = ""
     
-    func isAnswerCorrect() -> Bool {chosenAnswer == correctAnswer}
-    
-    func summary() -> String {
-        if isAnswerCorrect() {
-            return "Well done! Your answer of \(chosenAnswer) is correct!"
-        } else {
-            return "Wrong! The actual year was \(correctAnswer)."
-        }
+    // Computed properties
+    var isAnswerCorrect: Bool { chosenAnswer == correctAnswer}
+    var summary: String { isAnswerCorrect ? "Well done! Your answer of \(chosenAnswer) is correct!" : "Wrong! The actual year was \(correctAnswer)." }
+    var historyEntry: String {
+        // Get the current time & date and format it
+        let timeAndDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, h:mm:ss a"
+        let formattedDate = dateFormatter.string(from: timeAndDate)
+        
+        
+        var output = "Time & Date: \(formattedDate)\n"
+        output += "Question: \(text)\n"
+        output += "Your answer of \(chosenAnswer) was "
+        output += isAnswerCorrect ? "correct." : "incorrect."
+        
+        return output
     }
     
     // Return a random question
@@ -36,7 +45,7 @@ class Question {
         // Correct answer is easy to determine
         let correctAnswer = String(isQuestionAboutBirth ? composer.birthYear : composer.deathYear)
         
-        // EXPLAIN BETTER
+        // TODO: EXPLAIN BETTER
         var answers = Set<String>()
         answers.insert(correctAnswer)
         while answers.count < 4 {

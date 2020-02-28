@@ -25,9 +25,9 @@ class QuestionViewController: UIViewController {
     
     @IBAction func answerButtonClicked(_ sender: UIButton) {
         question.chosenAnswer = sender.titleLabel?.text! ?? ""
-        summaryLabel.text = question.summary()
+        summaryLabel.text = question.summary
         
-        if question.isAnswerCorrect() {
+        if question.isAnswerCorrect {
             correctTotal += 1
         } else {
             incorrectTotal += 1
@@ -35,6 +35,10 @@ class QuestionViewController: UIViewController {
         
         UserDefaults.standard.set(correctTotal, forKey: "correctTotal")
         UserDefaults.standard.set(incorrectTotal, forKey: "incorrectTotal")
+        
+        var history = UserDefaults.standard.array(forKey: "history") as! [String]
+        history.append(question.historyEntry)
+        UserDefaults.standard.set(history, forKey: "history")
     }
     
     @IBAction func returnToScoreboardClicked(_ sender: UIButton) {

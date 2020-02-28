@@ -13,12 +13,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var a = Question.getRandomQuestion()
-        
+
         // Set prefernces if first time
         if !UserDefaults.standard.bool(forKey: "defaultsAreStored") {
-            // Set prefernces if first time
             UserDefaults.standard.set(correctTotal, forKey: "correctTotal")
             UserDefaults.standard.set(incorrectTotal, forKey: "incorrectTotal")
             UserDefaults.standard.set([], forKey: "history")
