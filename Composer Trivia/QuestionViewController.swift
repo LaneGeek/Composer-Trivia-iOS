@@ -17,6 +17,7 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Populate the label and buttons with data from the question
         questionLabel.text = question.text
         button1.setTitle(question.answers[0], for: .normal)
         button2.setTitle(question.answers[1], for: .normal)
@@ -26,26 +27,34 @@ class QuestionViewController: UIViewController {
         // Disable the navigation back button
         navigationItem.hidesBackButton = true;
         
+        // Disable to prevent cheating
         returnToScorecardButton.isEnabled = false
     }
     
     @IBAction func answerButtonClicked(_ sender: UIButton) {
+        // Get chosen answer from the button 'sender' label
         question.chosenAnswer = sender.titleLabel?.text! ?? ""
+        
+        // Display the result
         summaryLabel.text = question.summary
         
+        // Add to the tally
         if question.isAnswerCorrect {
             correctTotal += 1
         } else {
             incorrectTotal += 1
         }
         
+        // Save this data
         UserDefaults.standard.set(correctTotal, forKey: "correctTotal")
         UserDefaults.standard.set(incorrectTotal, forKey: "incorrectTotal")
         
+        // Get history entry and save it
         var history = UserDefaults.standard.array(forKey: "history") as! [String]
         history.append(question.historyEntry)
         UserDefaults.standard.set(history, forKey: "history")
         
+        // Disable all answer buttons and enable home screen button
         button1.isEnabled = false
         button2.isEnabled = false
         button3.isEnabled = false

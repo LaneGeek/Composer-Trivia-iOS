@@ -2,6 +2,7 @@ import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
 
+    // Only one UI element is required
     @IBOutlet weak var historyCellLabel: UILabel!
     
     override func awakeFromNib() {
