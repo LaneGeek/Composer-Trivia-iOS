@@ -354,6 +354,7 @@
                         <outlet property="button3" destination="AoN-IV-doU" id="JqA-xs-tK8"/>
                         <outlet property="button4" destination="cmL-9v-Di3" id="Xgx-al-i0I"/>
                         <outlet property="questionLabel" destination="Jjb-jr-6gb" id="oJs-vj-rUd"/>
+                        <outlet property="returnToScorecardButton" destination="YxJ-4q-uIF" id="rp3-PR-dzj"/>
                         <outlet property="summaryLabel" destination="6zY-TR-H7F" id="gz0-vG-QQJ"/>
                     </connections>
                 </viewController>

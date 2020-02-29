@@ -8,6 +8,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var returnToScorecardButton: UIButton!
     
     var correctTotal = 0
     var incorrectTotal = 0
@@ -21,6 +22,11 @@ class QuestionViewController: UIViewController {
         button2.setTitle(question.answers[1], for: .normal)
         button3.setTitle(question.answers[2], for: .normal)
         button4.setTitle(question.answers[3], for: .normal)
+        
+        // Disable the navigation back button
+        navigationItem.hidesBackButton = true;
+        
+        returnToScorecardButton.isEnabled = false
     }
     
     @IBAction func answerButtonClicked(_ sender: UIButton) {
@@ -39,8 +45,15 @@ class QuestionViewController: UIViewController {
         var history = UserDefaults.standard.array(forKey: "history") as! [String]
         history.append(question.historyEntry)
         UserDefaults.standard.set(history, forKey: "history")
+        
+        button1.isEnabled = false
+        button2.isEnabled = false
+        button3.isEnabled = false
+        button4.isEnabled = false
+        returnToScorecardButton.isEnabled = true
     }
     
     @IBAction func returnToScoreboardClicked(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
 }

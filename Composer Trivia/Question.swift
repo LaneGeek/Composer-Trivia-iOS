@@ -10,7 +10,15 @@ class Question {
     
     // Computed properties
     var isAnswerCorrect: Bool { chosenAnswer == correctAnswer}
-    var summary: String { isAnswerCorrect ? "Well done! Your answer of \(chosenAnswer) is correct!" : "Wrong! The actual year was \(correctAnswer)." }
+    
+    var summary: String {
+        if isAnswerCorrect {
+            return "Well done! Your answer of \(chosenAnswer) is correct!"
+        } else {
+            return "Wrong! You chose \(chosenAnswer). However, the actual year was \(correctAnswer)."
+        }
+    }
+    
     var historyEntry: String {
         // Get the current time & date and format it
         let timeAndDate = Date()
@@ -18,7 +26,7 @@ class Question {
         dateFormatter.dateFormat = "MMM d, h:mm:ss a"
         let formattedDate = dateFormatter.string(from: timeAndDate)
         
-        
+        // Generate an entry for the history array
         var output = "Time & Date: \(formattedDate)\n"
         output += "Question: \(text)\n"
         output += "Your answer of \(chosenAnswer) was "
@@ -45,9 +53,11 @@ class Question {
         // Correct answer is easy to determine
         let correctAnswer = String(isQuestionAboutBirth ? composer.birthYear : composer.deathYear)
         
-        // TODO: EXPLAIN BETTER
+        // The answers have to be unique and so we choose a set which ensures uniqueness
         var answers = Set<String>()
+        // Add the correct answer
         answers.insert(correctAnswer)
+        // Add three fake random answers in the range of 1600 to 1999 for the years
         while answers.count < 4 {
             answers.insert(String(Int.random(in: 1600 ... 1999)))
         }
