@@ -267,23 +267,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD0-ej-Bsm">
-                                <rect key="frame" x="40" y="772" width="334" height="50"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="xpS-Lm-BeH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="Delete History"/>
-                                <connections>
-                                    <action selector="deleteHistoryButtonClicked:" destination="zCw-bM-J84" eventType="touchUpInside" id="twF-6j-W7j"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="l07-my-emZ">
                                 <rect key="frame" x="30" y="118" width="354" height="264"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIk-P6-ssy">
-                                        <rect key="frame" x="109.66666666666667" y="0.0" width="134.66666666666663" height="65.666666666666671"/>
+                                        <rect key="frame" x="109.66666666666669" y="0.0" width="134.66666666666663" height="65.666666666666671"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="48"/>
                                         <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -310,18 +298,99 @@
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="7lY-7A-9yj"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7lY-7A-9yj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7lY-7A-9yj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="7lY-7A-9yj"/>
+                                    </mask>
+                                </variation>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD0-ej-Bsm">
+                                <rect key="frame" x="117" y="762" width="180" height="50"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="CJm-3b-yw4"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZbF-EO-vNO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="Delete History"/>
+                                <connections>
+                                    <action selector="deleteHistoryButtonClicked:" destination="zCw-bM-J84" eventType="touchUpInside" id="twF-6j-W7j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pD0-ej-Bsm" firstAttribute="leading" secondItem="zTt-4e-eP4" secondAttribute="leading" constant="40" id="7PF-lo-f2J"/>
+                            <constraint firstItem="pD0-ej-Bsm" firstAttribute="centerX" secondItem="FHC-aX-uyl" secondAttribute="centerX" id="BG2-1w-5BG"/>
                             <constraint firstItem="l07-my-emZ" firstAttribute="leading" secondItem="zTt-4e-eP4" secondAttribute="leading" constant="30" id="PT0-Wn-9bN"/>
-                            <constraint firstItem="zTt-4e-eP4" firstAttribute="bottom" secondItem="pD0-ej-Bsm" secondAttribute="bottom" constant="40" id="Qpt-Lk-EGB"/>
                             <constraint firstItem="zTt-4e-eP4" firstAttribute="trailing" secondItem="l07-my-emZ" secondAttribute="trailing" constant="30" id="V6B-yU-UpC"/>
+                            <constraint firstItem="l07-my-emZ" firstAttribute="leading" secondItem="zTt-4e-eP4" secondAttribute="leading" constant="50" id="WCX-Wq-p9Y"/>
+                            <constraint firstItem="l07-my-emZ" firstAttribute="centerY" secondItem="FHC-aX-uyl" secondAttribute="centerY" id="auc-Ow-T5I"/>
+                            <constraint firstItem="zTt-4e-eP4" firstAttribute="trailing" secondItem="pD0-ej-Bsm" secondAttribute="trailing" constant="50" id="cWa-8h-gkg"/>
+                            <constraint firstItem="zTt-4e-eP4" firstAttribute="bottom" secondItem="pD0-ej-Bsm" secondAttribute="bottom" constant="50" id="dGE-YX-82h"/>
+                            <constraint firstItem="pD0-ej-Bsm" firstAttribute="centerY" secondItem="FHC-aX-uyl" secondAttribute="centerY" id="o8j-ls-wQj"/>
                             <constraint firstItem="l07-my-emZ" firstAttribute="top" secondItem="zTt-4e-eP4" secondAttribute="top" constant="30" id="xGU-A9-LwA"/>
-                            <constraint firstItem="zTt-4e-eP4" firstAttribute="trailing" secondItem="pD0-ej-Bsm" secondAttribute="trailing" constant="40" id="z5S-Sd-l2T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zTt-4e-eP4"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="V6B-yU-UpC"/>
+                                <exclude reference="cWa-8h-gkg"/>
+                                <exclude reference="dGE-YX-82h"/>
+                                <exclude reference="PT0-Wn-9bN"/>
+                                <exclude reference="WCX-Wq-p9Y"/>
+                                <exclude reference="auc-Ow-T5I"/>
+                                <exclude reference="xGU-A9-LwA"/>
+                                <exclude reference="BG2-1w-5BG"/>
+                                <exclude reference="o8j-ls-wQj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="cWa-8h-gkg"/>
+                                <include reference="WCX-Wq-p9Y"/>
+                                <include reference="auc-Ow-T5I"/>
+                                <include reference="o8j-ls-wQj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="cWa-8h-gkg"/>
+                                <include reference="WCX-Wq-p9Y"/>
+                                <include reference="auc-Ow-T5I"/>
+                                <include reference="o8j-ls-wQj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="V6B-yU-UpC"/>
+                                <include reference="dGE-YX-82h"/>
+                                <include reference="PT0-Wn-9bN"/>
+                                <include reference="xGU-A9-LwA"/>
+                                <include reference="BG2-1w-5BG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="V6B-yU-UpC"/>
+                                <include reference="dGE-YX-82h"/>
+                                <include reference="PT0-Wn-9bN"/>
+                                <include reference="xGU-A9-LwA"/>
+                                <include reference="BG2-1w-5BG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Preferences" id="ELs-FD-RsZ"/>
                     <connections>
