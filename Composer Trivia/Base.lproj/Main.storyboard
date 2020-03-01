@@ -275,21 +275,62 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="Delete History"/>
+                                <connections>
+                                    <action selector="deleteHistoryButtonClicked:" destination="zCw-bM-J84" eventType="touchUpInside" id="twF-6j-W7j"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="l07-my-emZ">
+                                <rect key="frame" x="30" y="118" width="354" height="264"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIk-P6-ssy">
+                                        <rect key="frame" x="109.66666666666667" y="0.0" width="134.66666666666663" height="65.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="48"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your desired background color:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-XY-zdl">
+                                        <rect key="frame" x="48.666666666666657" y="100.66666666666666" width="256.66666666666674" height="68.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TT8-Q9-HA8">
+                                        <rect key="frame" x="52" y="204" width="250" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="Wsa-N1-CeR"/>
+                                            <constraint firstAttribute="height" constant="60" id="jqC-A6-wig"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Red"/>
+                                            <segment title="Green"/>
+                                            <segment title="Blue"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="colorSelector:" destination="zCw-bM-J84" eventType="valueChanged" id="LSr-KN-ZeK"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="pD0-ej-Bsm" firstAttribute="leading" secondItem="zTt-4e-eP4" secondAttribute="leading" constant="40" id="7PF-lo-f2J"/>
+                            <constraint firstItem="l07-my-emZ" firstAttribute="leading" secondItem="zTt-4e-eP4" secondAttribute="leading" constant="30" id="PT0-Wn-9bN"/>
                             <constraint firstItem="zTt-4e-eP4" firstAttribute="bottom" secondItem="pD0-ej-Bsm" secondAttribute="bottom" constant="40" id="Qpt-Lk-EGB"/>
+                            <constraint firstItem="zTt-4e-eP4" firstAttribute="trailing" secondItem="l07-my-emZ" secondAttribute="trailing" constant="30" id="V6B-yU-UpC"/>
+                            <constraint firstItem="l07-my-emZ" firstAttribute="top" secondItem="zTt-4e-eP4" secondAttribute="top" constant="30" id="xGU-A9-LwA"/>
                             <constraint firstItem="zTt-4e-eP4" firstAttribute="trailing" secondItem="pD0-ej-Bsm" secondAttribute="trailing" constant="40" id="z5S-Sd-l2T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zTt-4e-eP4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Preferences" id="ELs-FD-RsZ"/>
+                    <connections>
+                        <outlet property="colorSelector" destination="TT8-Q9-HA8" id="vIk-ju-92T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofR-cE-ihb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="-731"/>
+            <point key="canvasLocation" x="711.59420289855075" y="-731.25"/>
         </scene>
         <!--Question-->
         <scene sceneID="u9M-DW-Edh">
@@ -528,7 +569,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3z-mD-Fkg">
                                             <rect key="frame" x="20" y="5.0000000000000018" width="374" height="27.666666666666671"/>
                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-MediumItalic" family="Avenir Next Condensed" pointSize="20"/>
-                                            <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

@@ -23,12 +23,13 @@ class HomeViewController: UIViewController {
             // Set flag that data is now stored
             UserDefaults.standard.set(true, forKey: "defaultsAreStored")
         }
-        
-        // Set background color
-        self.view.backgroundColor = UIColor.init(named: UserDefaults.standard.string(forKey: "color")!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        // Set background color
+        self.view.backgroundColor = UIColor.init(named: UserDefaults.standard.string(forKey: "color")!)
+
         // Retrieve prefernces
         correctTotal = UserDefaults.standard.integer(forKey: "correctTotal")
         incorrectTotal = UserDefaults.standard.integer(forKey: "incorrectTotal")

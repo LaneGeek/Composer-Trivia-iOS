@@ -22,6 +22,7 @@ class HistoryTableViewController: UITableViewController {
         
         // Fill each cell with a reading from history
         cell.historyCellLabel.text = history[indexPath.row]
+        cell.backgroundColor = UIColor.init(named: UserDefaults.standard.string(forKey: "color")!)
         return cell
     }
 }
