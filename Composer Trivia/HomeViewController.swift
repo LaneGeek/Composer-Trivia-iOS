@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
             UserDefaults.standard.set(correctTotal, forKey: "correctTotal")
             UserDefaults.standard.set(incorrectTotal, forKey: "incorrectTotal")
             UserDefaults.standard.set([], forKey: "history")
-            UserDefaults.standard.set("blueDark", forKey: "color")
+            UserDefaults.standard.set("redDark", forKey: "color")
             // Set flag that data is now stored
             UserDefaults.standard.set(true, forKey: "defaultsAreStored")
         }

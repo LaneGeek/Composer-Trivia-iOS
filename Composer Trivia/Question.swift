@@ -23,7 +23,7 @@ class Question {
         // Get the current time & date and format it
         let timeAndDate = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM d, h:mm:ss a"
+        dateFormatter.dateFormat = "MMM d, YYYY h:mm:ss a"
         let formattedDate = dateFormatter.string(from: timeAndDate)
         
         // Generate an entry for the history array

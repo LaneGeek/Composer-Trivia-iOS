@@ -54,7 +54,7 @@ class QuestionViewController: UIViewController {
         
         // Get history entry and save it
         var history = UserDefaults.standard.array(forKey: "history") as! [String]
-        history.append(question.historyEntry)
+        history.insert(question.historyEntry, at: 0)
         UserDefaults.standard.set(history, forKey: "history")
         
         // Disable all answer buttons and enable home screen button
