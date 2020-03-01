@@ -39,7 +39,6 @@ class PreferencesViewController: UIViewController {
         self.view.backgroundColor = UIColor.init(named: color)
     }
     
-    
     @IBAction func deleteHistoryButtonClicked(_ sender: UIButton) {
         // The action sheet is created
         let action = UIAlertController(title: "Delete History", message: "Do you really want to do this?", preferredStyle: .alert)

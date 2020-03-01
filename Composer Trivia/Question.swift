@@ -1,7 +1,6 @@
 import Foundation
 
 class Question {
-    
     // Properties
     var text = ""
     var correctAnswer = ""
