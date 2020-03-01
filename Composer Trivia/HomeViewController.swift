@@ -26,7 +26,6 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         // Set background color
         self.view.backgroundColor = UIColor.init(named: UserDefaults.standard.string(forKey: "color")!)
 

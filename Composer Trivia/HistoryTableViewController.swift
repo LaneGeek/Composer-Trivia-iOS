@@ -20,7 +20,7 @@ class HistoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
         
-        // Fill each cell with a reading from history
+        // Fill each cell with a reading from history and set the background color
         cell.historyCellLabel.text = history[indexPath.row]
         cell.backgroundColor = UIColor.init(named: UserDefaults.standard.string(forKey: "color")!)
         return cell
