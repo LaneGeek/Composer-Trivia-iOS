@@ -19,9 +19,13 @@ class HomeViewController: UIViewController {
             UserDefaults.standard.set(correctTotal, forKey: "correctTotal")
             UserDefaults.standard.set(incorrectTotal, forKey: "incorrectTotal")
             UserDefaults.standard.set([], forKey: "history")
+            UserDefaults.standard.set("blueDark", forKey: "color")
             // Set flag that data is now stored
             UserDefaults.standard.set(true, forKey: "defaultsAreStored")
         }
+        
+        // Set background color
+        self.view.backgroundColor = UIColor.init(named: UserDefaults.standard.string(forKey: "color")!)
     }
     
     override func viewWillAppear(_ animated: Bool) {

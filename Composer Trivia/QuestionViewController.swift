@@ -17,6 +17,9 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set background color
+        self.view.backgroundColor = UIColor.init(named: UserDefaults.standard.string(forKey: "color")!)
+        
         // Populate the label and buttons with data from the question
         questionLabel.text = question.text
         button1.setTitle(question.answers[0], for: .normal)

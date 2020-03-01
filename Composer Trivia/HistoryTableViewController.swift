@@ -7,6 +7,9 @@ class HistoryTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set background color
+        self.view.backgroundColor = UIColor.init(named: UserDefaults.standard.string(forKey: "color")!)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
