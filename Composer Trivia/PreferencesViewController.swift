@@ -42,7 +42,7 @@ class PreferencesViewController: UIViewController {
     
     @IBAction func deleteHistoryButtonClicked(_ sender: UIButton) {
         // The action sheet is created
-        let action = UIAlertController(title: "Delete History", message: "Do you really want to do this?", preferredStyle: .actionSheet)
+        let action = UIAlertController(title: "Delete History", message: "Do you really want to do this?", preferredStyle: .alert)
         
         // The yes action will create an alert confirming that history has been deleted
         let yesAction = UIAlertAction(title: "You leave me no choice.", style: .default, handler: {
@@ -50,7 +50,10 @@ class PreferencesViewController: UIViewController {
             let alert = UIAlertController(title: "History", message: "is now deleted 😞", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alert, animated: true, completion: nil)
+            // Reset user defaults
             UserDefaults.standard.set([], forKey: "history")
+            UserDefaults.standard.set(0, forKey: "correctTotal")
+            UserDefaults.standard.set(0, forKey: "incorrectTotal")
         })
         
         // The no action will do nothing
