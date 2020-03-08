@@ -20,9 +20,19 @@ class HistoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
         
-        // Fill each cell with a reading from history and set the background color
-        cell.historyCellLabel.text = history[indexPath.row]
-        cell.backgroundColor = UIColor.init(named: UserDefaults.standard.string(forKey: "color")!)
+        // Get the text for the cell
+        let cellText = history[indexPath.row]
+        
+        // Set emoji and color depending on correct or incorrect
+        if cellText.contains("incorrect") {
+            cell.historyCellLabel.text = cellText + "  ☹️"
+            cell.backgroundColor = UIColor.init(named: "redDark")
+        } else {
+            cell.historyCellLabel.text = cellText + "  😃"
+            cell.backgroundColor = UIColor.init(named: "greenDark")
+        }
+        
+        // render the cell
         return cell
     }
 }
